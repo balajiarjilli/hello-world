@@ -7,6 +7,16 @@
   <artifactId>maven-project</artifactId>
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+<distributionManagement>
+   <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://65.0.32.60:8081/repository/maven-snapshots/</url>
+   </snapshotRepository>
+   <repository>
+      <id>nexus-releases</id>
+      <url>http://65.0.32.60:8081/repository/maven-releases/</url>
+   </repository>
+</distributionManagement>
   <name>Maven Project</name>
   <description>Sample Maven project with a working, deployable site.</description>
   <url>http://www.example.com</url>
