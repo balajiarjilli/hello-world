@@ -6,17 +6,7 @@
   <groupId>com.example.maven-project</groupId>
   <artifactId>maven-project</artifactId>
   <packaging>pom</packaging>
-  <version>1.0</version>
-<!--  <distributionManagement>
-   <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <url>http://13.232.226.61:8081/repository/maven-snapshots/</url>
-   </snapshotRepository>
-   <repository>
-      <id>nexus-releases</id>
-      <url>http://13.232.226.61:8081/repository/maven-releases/</url>
-   </repository>
-  </distributionManagement>  -->
+  <version>1.0-SNAPSHOT</version>
   <name>Maven Project</name>
   <description>Sample Maven project with a working, deployable site.</description>
   <url>http://www.example.com</url>
@@ -30,6 +20,15 @@
     <module>server</module>
     <module>webapp</module>
   </modules>
+
+  <distributionManagement>
+    <site>
+      <id>site-server</id>
+      <name>Test Project Site</name>
+      <url>file:///tmp/maven-project-site</url>
+    </site>
+  </distributionManagement>
+
   <build>
     <plugins>
       <plugin>
